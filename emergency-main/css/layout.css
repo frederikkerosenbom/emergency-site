@@ -1,0 +1,84 @@
+/* LAYOUT FOR MAIN CONTENT */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+main {
+  display: grid;
+  row-gap: 1rem;
+}
+main > *:not(:first-child) {
+  margin: 0 1rem;
+}
+main {
+  grid-template-rows: min-content min-content 1fr min-content;
+}
+#instruction main {
+  grid-template-rows: min-content min-content min-content 1fr min-content;
+}
+/* LAYOUT FOR HEADER AND FOOTER */
+footer {
+  display: grid;
+  gap: 10px;
+}
+header nav,
+footer nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav > * {
+  flex: 1;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+header ul {
+  height: 100%;
+  width: clamp(175px, 50%, 300px);
+}
+footer ul {
+  flex-direction: column;
+  padding-left: 1rem;
+}
+
+/* LAYOUT FOR SECTIONS */
+#daily,
+#breaking {
+  display: grid;
+}
+#daily {
+  grid-template-rows: repeat(2, minmax(200px, min-content));
+  gap: 1rem;
+}
+#breaking {
+  grid-template-rows: repeat(auto-fit, minmax(50px, min-content));
+  gap: 0;
+}
+
+@media (width > 600px) {
+  #frontpage > main {
+    grid-template-columns: 6fr 3fr;
+    grid-template-rows: auto 1fr auto;
+  }
+  #instruction > main,
+  #register > main {
+    grid-template-columns: 5fr 3fr;
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .qr {
+    order: 1;
+  }
+
+  h1 {
+    grid-column: 1 / -1;
+  }
+  footer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

@@ -1,0 +1,144 @@
+html {
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+header {
+  height: min-content;
+}
+
+#main-disclamer {
+  height: 225px;
+  background-color: var(--color-head-bg);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2rem;
+  padding-bottom: 2%;
+  margin-bottom: var(--margin-head-bottom);
+  margin-top: var(--margin-head-top);
+}
+
+#main-disclamer-content {
+  display: flex;
+  column-gap: 1rem;
+}
+
+main section {
+  padding: 20px;
+  border-radius: var(--border-radius);
+}
+
+h1 {
+  font-family: var(--font-family-cheeryBomb);
+  font-size: var(--font-h1-size);
+  font-weight: var(--font-weight-bold);
+  /* color: var(--color-text-inverted); */
+  color: var(--color-headline-text-page);
+  margin: 5px 0;
+  /* line-height: 1.3rem; */
+  line-height: 6.3rem;
+  text-align: left;
+}
+
+#instruction h1,
+#register h1 {
+  margin: 40px 0 20px 0;
+  padding: 15px 30px;
+  background-color: var(--color-head-bg);
+  font-size: var(--font-h1-size);
+}
+
+#instruction p {
+  grid-column: 1/-1;
+  margin-bottom: 20px;
+  font-size: var(--font-h2-size);
+  line-height: 1.5rem;
+}
+
+.sub {
+  /* font-family: var(--font-family-cheeryBomb); */
+  font-size: var(--font-sub1-size);
+  font-weight: var(--font-weight-light);
+  /* color: var(--color-text-inverted); */
+  color: var(--color-headline-text-page);
+}
+
+h2 {
+  font-size: var(--headline2-size);
+}
+
+h3 {
+  font-size: var(--headline3-size);
+}
+
+main > h1 {
+  width: calc(80% - 6rem);
+}
+
+/* NAVIGATION STRUCTURES */
+header > nav {
+  height: 100%;
+  background-color: var(--color-menu-bg);
+}
+
+nav ul {
+  list-style: none;
+}
+
+a {
+  font-family: var(--font-family-sans);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+/* Måske skal du lave en ny regel for logotype-wrapper, når du har lavet din logotype */
+#logotype-wrapper {
+  background-color: var(--color-logotype-bg);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 3.6rem;
+}
+
+#logotype-wrapper > a {
+  color: var(--color-text-logotype);
+  font-size: var(--font-logotype-size);
+  font-weight: var(--font-weight-medium);
+  width: max-content;
+  margin-left: 1rem;
+  font-family: var(--font-family-cheeryBomb);
+}
+
+/* Global menu */
+header nav li a {
+  margin: 1.5rem;
+  background-color: var(--color-link-bg);
+  color: var(--color-text);
+  font-size: var(--followup-text-size);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-links);
+}
+
+/* Pilen efter menu-tekst */
+header > nav li > a:after {
+  content: " \2192";
+}
+
+/* Global menu hover effekt - Lav den om til det, du synes */
+nav a:hover {
+  background-color: var(--color-link-hover);
+}
+
+nav a:active {
+  background-color: var(--color-link-active);
+}
+
+/* FOOTER */
+footer a {
+  font-size: 0.7rem;
+}

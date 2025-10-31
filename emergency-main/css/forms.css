@@ -1,0 +1,32 @@
+#webform {
+  background-color: var(--form-background-color);
+}
+
+#form-section,
+#form-summary {
+  background-color: var(--info-background-color);
+  padding: 0;
+}
+#form-summary h2 {
+  line-height: 3rem;
+  text-align: center;
+  background-color: var(--headline-bg-color-inverted);
+  color: var(--headline-color-inverted);
+  padding-top: 5px;
+}
+#form-summary h3 {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+#form-summary > *:not(:first-child) {
+  margin: 0 clamp(1rem, 10%, 7rem);
+}
+#form-summary p {
+  font-size: 0.8rem;
+  line-height: 1.3;
+  margin: 0 0 1.2rem 0;
+  padding: 0;
+}

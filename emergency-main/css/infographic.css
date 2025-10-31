@@ -1,0 +1,44 @@
+#head-txt {
+  fill: rgb(54, 54, 54);
+}
+.info-graphic,
+.info-text {
+  background-color: var(--color-info-bg);
+  padding: 20px 0;
+}
+.info-graphic {
+  border-radius: 0;
+  margin: 60px auto 80px auto;
+}
+.info-text h2 {
+  line-height: 3rem;
+  text-align: center;
+  background-color: var(--color-headline-bg);
+  /* color: var(--color-headline-text-page); */
+  color: var(--color-page2-text-page);
+  font-family: var(--font-family-cheeryBomb);
+  margin-bottom: 1rem;
+}
+.info-text h3 {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+.info-text > *:not(:first-child) {
+  margin: 0 clamp(1rem, 10%, 7rem);
+}
+.info-text p {
+  font-size: 0.8rem;
+  line-height: 1.3;
+  margin: 0 0 1.2rem 0;
+  padding: 0;
+}
+.info-box {
+  padding: 1.5rem 1rem 0.5rem 1rem;
+  background-color: var(--color-infobox-1-bg);
+}
+.info-box:nth-of-type(2n) {
+  background-color: var(--color-infobox-2-bg);
+}
