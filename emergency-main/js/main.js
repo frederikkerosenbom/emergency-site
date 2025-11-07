@@ -1,28 +1,27 @@
-// document.querySelector("#frontpage h1").textContent = "EMERGENCY";
-// document.querySelector("#frontpage .sub").textContent = "SITE";
+//konstanter//
+const head = document.querySelector("#hotspotHeadset");
+const hue = document.querySelector("#hotspotHue");
+const phone = document.querySelector("#hotspotPhone");
+const sko = document.querySelector("#hotspotSko");
+const overskrift = document.querySelector(".info-text > h2");
+const brodtekst = document.querySelector(".info-text > article > p");
+const efficiency = document.querySelector("#efficiency");
+const requirement = document.querySelector("#requirement");
 
 // farveskift headset
-document
-  .querySelector("#hotspotHeadset")
-  .addEventListener("mouseover", headHighlight);
-document
-  .querySelector("#hotspotHeadset")
-  .addEventListener("mouseout", headUnHighlight);
-function headHighlight() {
-  console.log("headHighlight");
+head.addEventListener("mouseover", headsetHighlight);
+head.addEventListener("mouseout", headsetUnHighlight);
+function headsetHighlight() {
+  console.log("headsetHighlight");
   this.style.fill = "rgba(255, 0, 200, 1)";
 }
-function headUnHighlight() {
+function headsetUnHighlight() {
   console.log("headUnHighlight");
   this.style.fill = "#f9b4d3";
 }
 // farveskift hue
-document
-  .querySelector("#hotspotHue")
-  .addEventListener("mouseover", hueHighlight);
-document
-  .querySelector("#hotspotHue")
-  .addEventListener("mouseout", hueUnHighlight);
+hue.addEventListener("mouseover", hueHighlight);
+hue.addEventListener("mouseout", hueUnHighlight);
 function hueHighlight() {
   console.log("hueHighlight");
   this.style.fill = "rgba(255, 0, 200, 1)";
@@ -32,12 +31,8 @@ function hueUnHighlight() {
   this.style.fill = "#fddf5a";
 }
 // farveskift Phone
-document
-  .querySelector("#hotspotPhone")
-  .addEventListener("mouseover", phoneHighlight);
-document
-  .querySelector("#hotspotPhone")
-  .addEventListener("mouseout", phoneUnHighlight);
+phone.addEventListener("mouseover", phoneHighlight);
+phone.addEventListener("mouseout", phoneUnHighlight);
 function phoneHighlight() {
   console.log("phoneHighlight");
   this.style.fill = "rgba(255, 0, 200, 1)";
@@ -47,12 +42,8 @@ function phoneUnHighlight() {
   this.style.fill = "#000";
 }
 // farveskift sko
-document
-  .querySelector("#hotspotSko")
-  .addEventListener("mouseover", shoeHighlight);
-document
-  .querySelector("#hotspotSko")
-  .addEventListener("mouseout", shoeUnHighlight);
+sko.addEventListener("mouseover", shoeHighlight);
+sko.addEventListener("mouseout", shoeUnHighlight);
 function shoeHighlight() {
   console.log("shoeHighlight");
   this.style.fill = "rgba(255, 0, 200, 1)";
@@ -63,93 +54,73 @@ function shoeUnHighlight() {
 }
 
 // faktaboks indhold headset
-document
-  .querySelector("#hotspotHeadset")
-  .addEventListener("click", headsetInfo);
+head.addEventListener("click", headsetInfo);
 
 function headsetInfo() {
   console.log("headsetInfo");
 
   animateBoxes();
 
-  document.querySelector(".info-text > h2").textContent =
-    "Når beatet overdøver virkeligheden";
-  document.querySelector(".info-text > article > p").textContent =
-    "Du var midt i dit yndlingsnummer, verden forsvandt - og så gjorde balancen også. Resultat: 1-0 til asfalten.? Høretelefoner gør dig døv for trafikken, uanset om du er på 2, 4 eller flere hjul. Og det går stærkt, når du ikke hører bilen, der dytter bag dig.";
-  document.querySelector("#efficiency").innerHTML =
-    "<h3>Effektivitet</h3><p>lorem ipsum1</p>";
-  document.querySelector("#requirement").innerHTML =
-    "<h3>Styrke</h3><p>lorem ipsum1</p>";
+  overskrift.textContent = "Når beatet overdøver virkeligheden";
+  brodtekst.textContent = "Du var midt i dit yndlingsnummer, verden forsvandt - og så gjorde balancen også. Resultat: 1-0 til asfalten.? Høretelefoner gør dig døv for trafikken, uanset om du er på 2, 4 eller flere hjul. Og det går stærkt, når du ikke hører bilen, der dytter bag dig.";
+  efficiency.innerHTML = "<h3>Effektivitet</h3><p>lorem ipsum1</p>";
+  requirement.innerHTML = "<h3>Styrke</h3><p>lorem ipsum1</p>";
 }
 
 // faktaboks indhold hue
-document.querySelector("#hotspotHue").addEventListener("click", hueInfo);
+hue.addEventListener("click", hueInfo);
 
 function hueInfo() {
   console.log("hueInfo");
 
   animateBoxes();
 
-  document.querySelector(".info-text > h2").textContent = "Den glemte helt";
-  document.querySelector(".info-text > article > p").textContent =
-    " “Jeg skal jo ikke så langt, den ødelægger min frisure, den ligger der hjemme” - sagde alle, der endte på skadestuen. Men hey - frisuren sad jo perfekt, indtil du ramte fortovskanten. Uanset om du kører på rulleskøjter, cykel eller el-løbehjul, er hjelmen stadig den mest undervurderede superhelt.";
-  document.querySelector("#efficiency").innerHTML =
-    "<h3>Effektivitet</h3><p>lorem ipsum2</p>";
-  document.querySelector("#requirement").innerHTML =
-    "<h3>Styrke</h3><p>lorem ipsum2</p>";
+  overskrift.textContent = "Den glemte helt";
+  brodtekst.textContent = " “Jeg skal jo ikke så langt, den ødelægger min frisure, den ligger der hjemme” - sagde alle, der endte på skadestuen. Men hey - frisuren sad jo perfekt, indtil du ramte fortovskanten. Uanset om du kører på rulleskøjter, cykel eller el-løbehjul, er hjelmen stadig den mest undervurderede superhelt.";
+  efficiency.innerHTML = "<h3>Effektivitet</h3><p>lorem ipsum2</p>";
+  requirement.innerHTML = "<h3>Styrke</h3><p>lorem ipsum2</p>";
 }
 
 // faktaboks indhold sko
-document.querySelector("#hotspotSko").addEventListener("click", skoInfo);
+sko.addEventListener("click", skoInfo);
 
 function skoInfo() {
   console.log("skoInfo");
 
   animateBoxes();
 
-  document.querySelector(".info-text > h2").textContent = "Den skjulte fjende";
-  document.querySelector(".info-text > article > p").textContent =
-    "Du ville bare lige rulle lidt - men ét løst snørebånd, og pludselig laver du parkour midt på cykelstien. Lyder fjollet? Jep. Men præcis sådan starter mange ulykker - også på el-løbehjul og cykel, hvor udstyr og manglende fokus sender folk i asfalten.";
-  document.querySelector("#efficiency").innerHTML =
-    "<h3>Effektivitet</h3><p>lorem ipsum3</p>";
-  document.querySelector("#requirement").innerHTML =
-    "<h3>Styrke</h3><p>lorem ipsum3</p>";
+  overskrift.textContent = "Den skjulte fjende";
+  brodtekst.textContent = "Du ville bare lige rulle lidt - men ét løst snørebånd, og pludselig laver du parkour midt på cykelstien. Lyder fjollet? Jep. Men præcis sådan starter mange ulykker - også på el-løbehjul og cykel, hvor udstyr og manglende fokus sender folk i asfalten.";
+  efficiency.innerHTML = "<h3>Effektivitet</h3><p>lorem ipsum3</p>";
+  requirement.innerHTML = "<h3>Styrke</h3><p>lorem ipsum3</p>";
 }
 // faktaboks indhold phone
-document.querySelector("#hotspotPhone").addEventListener("click", phoneInfo);
+phone.addEventListener("click", phoneInfo);
 
 function phoneInfo() {
   console.log("phoneInfo");
 
   animateBoxes();
 
-  document.querySelector(".info-text > h2").textContent =
-    "Bare lige et hurtigt kig…";
-  document.querySelector(".info-text > article > p").textContent =
-    "En besked, et like - og BUM! du møder kantstenen frontalt. Telefoner og hjul er en farlig blanding, uanset om du ruller, cykler eller suser af sted på el-løbehjul.";
-  document.querySelector("#efficiency").innerHTML =
-    "<h3>Effektivitet</h3><p>lorem ipsum4</p>";
-  document.querySelector("#requirement").innerHTML =
-    "<h3>Styrke</h3><p>lorem ipsum4</p>";
+  overskrift.textContent = "Bare lige et hurtigt kig…";
+  brodtekst.textContent = "En besked, et like - og BUM! du møder kantstenen frontalt. Telefoner og hjul er en farlig blanding, uanset om du ruller, cykler eller suser af sted på el-løbehjul.";
+  efficiency.innerHTML = "<h3>Effektivitet</h3><p>lorem ipsum4</p>";
+  requirement.innerHTML = "<h3>Styrke</h3><p>lorem ipsum4</p>";
 }
 
 function animateBoxes() {
-  document.querySelector("#efficiency").classList.remove("hide");
-  document.querySelector("#efficiency").classList.add("fadeIn");
+  efficiency.classList.remove("hide");
+  efficiency.classList.add("fadeIn");
 
-  document.querySelector("#requirement").classList.remove("hide");
-  document.querySelector("#requirement").classList.add("fadeIn");
+  requirement.classList.remove("hide");
+  requirement.classList.add("fadeIn");
 
-  document
-    .querySelector("#requirement")
-    .addEventListener("animationend", cleanUp);
+  requirement.addEventListener("animationend", cleanUp);
 }
 
 function cleanUp() {
   console.log("cleanUp");
-  document
-    .querySelector("#requirement")
-    .removeEventListener("animationend", cleanUp);
-  document.querySelector("#efficiency").classList.remove("fadeIn");
-  document.querySelector("#requirement").classList.remove("fadeIn");
+  requirement.removeEventListener("animationend", cleanUp);
+  efficiency.classList.remove("fadeIn");
+  requirement.classList.remove("fadeIn");
 }

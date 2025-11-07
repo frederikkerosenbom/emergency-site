@@ -36,7 +36,7 @@ h1 {
   font-weight: var(--font-weight-bold);
   /* color: var(--color-text-inverted); */
   color: var(--color-headline-text-page);
-  margin: 5px 0;
+  margin: 30px 0;
   /* line-height: 1.3rem; */
   line-height: 6.3rem;
   text-align: left;
@@ -141,4 +141,8 @@ nav a:active {
 /* FOOTER */
 footer a {
   font-size: 0.7rem;
+}
+
+:focus-visible {
+  outline: #00467f 1px;
 }

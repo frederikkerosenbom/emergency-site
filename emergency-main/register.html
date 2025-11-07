@@ -12,7 +12,8 @@
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/burger.css" />
   <link rel="stylesheet" href="css/cards.css" />
-  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="css/forms.css" />
+  <link rel="stylesheet" href="css/infographic.css" />
   <link rel="icon" type="image/png" href="img/fav.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,10 +43,235 @@
     <h1>INDBERET</h1>
     <section id="form-section">
       <article id="form-info">
-        <h2>Overskrift</h2>
-        <p>Tekst</p>
+
+        <h2>HJÆLP!</h2>
+
+
+
       </article>
-      <form id="webform"></form>
+      <form id="webform">
+        <div class="form-group-1">
+
+          <h4>ER DU FALDET PÅ HJUL?</h4>
+          <div class="form-group-1" id="form-show">
+
+            <label for="fallYes">
+              <input id="fallYes" name="fall" type="radio" required>JA
+            </label>
+            <label for="fallNo">
+              <input id="fallNo" name="fall" type="radio">NEJ
+            </label>
+
+          </div>
+        </div>
+
+        <div class="form-q-skjul">
+
+          <h3>KONTAKT</h3>
+
+          <div class="form-group webform-kontakt">
+
+            <label for="name">NAVN: <input id="name" name="name" type="name" required /></label>
+
+            <label for="e-mail">E-MAIL: <input id="e-mail" name="e-mail" type="email" required />
+            </label>
+
+          </div>
+          <h3>DETALJER</h3>
+          <div class="webform-detaljer">
+
+
+            <div class="form-group-hjelm">
+              <h4>HAVDE DU HJELM PÅ?</h4>
+              <div class="form-group-1">
+                <label for="hjelm-yes">
+                  <input id="hjelm-yes" name="helmet" type="radio">JA
+                </label>
+                <label for="hjelm-no">
+                  <input id="hjelm-no" name="helmet" type="radio">NEJ
+                </label>
+              </div>
+            </div>
+            <div class="form-group fall-group">
+              <h4>HVAD FALDT DU PÅ?</h4>
+
+              <select id="hjul-select" required>
+                <option value="" disabled selected>----Vælg et køretøj----</option>
+                <option value="rollerblade">Rulleskøjter</option>
+                <option value="bike">Cykel</option>
+                <option value="skateboard">Skateboard</option>
+                <option value="scooter">Løbehjul</option>
+                <option value="hjul-other">Andet</option>
+              </select>
+              <div class="ukendt">
+                <input id="other-input" name="other-input" type="text" placeholder="Hvad faldt du på?" />
+              </div>
+            </div>
+
+            <div class="form-group pain-group">
+              <h4>HVOR ONDT HAR DU?</h4>
+              <input id="pain" name="pain" type="number" placeholder="Vurder din smerte mellem 1-10" required />
+            </div>
+
+            <div class="form-group">
+              <h4>HVOR SLOG DU DIG?</h4>
+              <div class="hurt">
+                <label for="hovede">
+                  <input id="hovede" name="hurt" type="checkbox">HOVEDE
+                </label>
+                <label for="arme">
+                  <input id="arme" name="arme" type="checkbox">ARME
+                </label>
+                <label for="ben">
+                  <input id="ben" name="ben" type="checkbox">BEN
+                </label>
+                <label for="haender">
+                  <input id="haender" name="haender" type="checkbox">HÆNDER
+                </label>
+                <label for="haandled">
+                  <input id="haandled" name="haandled" type="checkbox">HÅNDLED
+                </label>
+                <label for="skulder">
+                  <input id="skulder" name="skulder" type="checkbox">SKULDER
+                </label>
+                <label for="knae">
+                  <input id="knae" name="knae" type="checkbox">KNÆ
+                </label>
+                <label for="andet" class="hurt-andet">
+                  <input id="andet" name="andet" type="checkbox">ANDET
+                </label>
+              </div>
+              <div class="hurt-skjul">
+                <input id="hurt-skjul" name="hurt-skjul" type="text" placeholder="Beskriv hvor" />
+              </div>
+              <div class="hurt-extra">
+                <fieldset>
+                  <legend>SYNLIGE SKADER?</legend>
+                  <textarea id="hurt-extra-text"></textarea>
+                </fieldset>
+              </div>
+            </div>
+
+            <div class="form-group date-group">
+              <h4>HVORNÅR SKETE DET?</h4>
+              <label for="date" class="date">DATO:
+                <input type="date" id="date" name="date">
+              </label>
+            </div>
+
+            <div class="form-group how-group">
+              <h4>HVORDAN SKETE DET?</h4>
+              <textarea name="message" id="message"> </textarea>
+
+            </div>
+
+            <div class="form-group distract-group">
+              <h4>VAR DU DISTRAHERET?</h4>
+              <div class="form-group-1">
+                <label for="distract-yes">
+                  <input id="distract-yes" name="distraction" type="radio">JA
+                </label>
+                <label for="distract-no">
+                  <input id="distract-no" name="distraction" type="radio">NEJ
+                </label>
+                <label for="distract-maybe">
+                  <input id="distract-maybe" name="distraction" type="radio">MÅSKE
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group pinlig-group">
+
+              <h4>HVOR PINLIGT VAR DET?</h4>
+              <label for="pinlig">
+                <input type="range" id="pinlig" min="0" max="100" value="50"> </label>
+            </div>
+
+            <div class="form-group before-group">
+
+              <h4>HAR DU PRØVET DET FØR?</h4>
+              <div class="before-flex">
+                <label for="before-yes">
+                  <input id="before-yes" name="before" type="radio">JA
+                </label>
+                <label for="before-no">
+                  <input id="before-no" name="before" type="radio">NEJ
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group doctor-group">
+
+              <label for="check-doctor" class="check-doctor">
+
+                <h4>TJEK OM DU SKAL HAVE LÆGEHJÆLP</h4>
+                <input id="check-doctor" type="checkbox">
+                <p class="check-doctor-p">Tjek de bokse af der passer</p>
+              </label>
+
+
+
+              <div class="doctor">
+                <label for="blodS">
+                  <input id="blodS" name="blodS" type="checkbox">BLØDER LIDT
+                </label>
+                <label for="blodM">
+                  <input id="blodM" name="blodM" type="checkbox">BLØDER MEGET
+                </label>
+                <label for="head-doctor">
+                  <input id="head-doctor" name="head-doctor" type="checkbox">SLÅET HOVEDET
+                </label>
+                <label for="doctor-skrab">
+                  <input id="doctor-skrab" name="doctor-skrab" type="checkbox">HUDAFSKRABNING
+                </label>
+                <label for="blod-head">
+                  <input id="blod-head" name="blod-head" type="checkbox">BLØDER FRA HOVEDE
+                </label>
+                <label for="svimmel">
+                  <input id="svimmel" name="svimmel" type="checkbox">FØLER DIG SVIMMEL
+                </label>
+                <label for="bones">
+                  <input id="bones" name="bones" type="checkbox">KAN SE KNOGLER
+                </label>
+                <label for="help">
+                  <input id="help" name="help" type="checkbox">INGEN OMKRING HJÆLPER
+                </label>
+                <label for="noMove">
+                  <input id="noMove" name="noMove" type="checkbox">KAN IKKE BEVÆGE BEN EL. ARM
+                </label>
+                <label for="home">
+                  <input id="home" name="home" type="checkbox">JEG KAN GODT KØRE/GÅ HJEM
+                </label>
+
+                <button type="button" id="doctor-check-btn">TJEK</button>
+                <button type="reset" id="doctor-reset-btn">RYD</button>
+
+              </div>
+              <div class="doctor-skjul1" id="doctor-skjul1">
+                <p>🚨RING 112🚨</p>
+                <p>BETTER SAFE THAN SORRY</p>
+              </div>
+              <div class="doctor-skjul2" id="doctor-skjul2">
+                <p>😬KOM HJEM OG SLAP AF😬</p>
+              </div>
+              <div class="doctor-skjul3" id="doctor-skjul3">
+                <p>😎TAG DIG SAMMEN OG KØR HJEM😎</p>
+              </div>
+              <div class="doctor-skjul4" id="doctor-skjul4">
+                <p>🧠RING TIL EGEN LÆGE🧠 </p>
+                <p>MÅSKE DU HAR HJERNERYSTELSE</p>
+              </div>
+            </div>
+
+          </div>
+
+          <button id="submit_btn" type="submit" class="send-button">
+            SEND
+          </button>
+          <button type="reset" class="reset-button">RYD FORMULAR</button>
+
+        </div>
+      </form>
     </section>
     <section id="form-summary">
       <h2>Summary</h2>
@@ -81,7 +307,7 @@
     </nav>
   </footer>
   <script src="js/burger.js"></script>
-  <!-- <script src="js/main.js"></script> -->
+  <script src="js/forms.js"></script>
 </body>
 
 </html>

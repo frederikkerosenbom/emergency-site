@@ -19,7 +19,7 @@
   --border-radius-links: 5px;
 
   /* Headlines og rubrik */
-  --font-h1-size: 7rem;
+  --font-h1-size: 10rem;
   --font-sub1-size: 4rem;
   --font-h2-size: 1rem;
   --font-h3-size: 2rem;
@@ -54,6 +54,7 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700; */
   --font-family-cheeryBomb: "Cherry Bomb One";
+  --font-family-sans-serif: sans-serif;
 
   /* Text sizes */
   --logotype-size: 1rem;
@@ -69,4 +70,14 @@
   --color-info-bg: #0e9ef3;
   --color-infobox-1-bg: #fec71d;
   --color-infobox-2-bg: #f9b4d3;
+
+  /*forms*/
+  --form-border: 15px solid #004583;
+  --form-border-radius: 70px;
+  --form-font-family: ui-sans-serif;
+  --form-text-color: #004583;
+  --form-input-border: 2.5px solid #004583;
+  --form-input-border-radius: 10px;
+  --form-input-padding: 5px;
+  --form-input-width: 100%;
 }

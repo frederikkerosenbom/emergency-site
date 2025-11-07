@@ -45,6 +45,7 @@
 
 .hide {
   visibility: hidden;
+  display: none;
 }
 
 .fadeIn {
