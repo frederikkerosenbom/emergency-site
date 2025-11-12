@@ -2,11 +2,6 @@
   background-color: var(--form-background-color);
 }
 
-#form-section,
-#form-summary {
-  background-color: var(--info-background-color);
-  padding: 0;
-}
 #form-summary h2 {
   line-height: 3rem;
   text-align: center;
@@ -97,6 +92,11 @@ form {
   margin-right: 5px;
 }
 
+#form-show label {
+  display: flex;
+  justify-content: center;
+}
+
 .webform-kontakt {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -125,6 +125,7 @@ form {
 .how-group {
   grid-column: 1/2;
   grid-row: 2/3;
+  height: fit-content;
 }
 
 .pinlig-group {
@@ -139,7 +140,8 @@ form {
 .distract-group {
   grid-column: 1/2;
   grid-row: 2/3;
-  place-content: end;
+  height: fit-content;
+  margin-top: 12rem;
 }
 
 .date-group {
@@ -242,9 +244,18 @@ form {
 textarea {
   border: 0;
   width: 100%;
+  padding: 5px;
+  font-family: var(--font-family-sans-serif);
+  color: var(--form-text-color);
 }
+
 .hurt-extra textarea {
   min-height: 3lh;
+}
+
+textarea:focus {
+  font-family: var(--font-family-sans-serif);
+  color: var(--form-text-color);
 }
 
 fieldset {
@@ -274,11 +285,11 @@ legend {
   margin-block: 10px;
 }
 
-#message {
+.how-group textarea {
   border: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   padding: var(--form-input-padding);
-  width: var(--form-input-width);
+  /* width: var(--form-input-width); */
   margin-block: 10px;
   font-weight: normal;
 }
@@ -324,6 +335,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-weight: bold;
   place-self: center;
   font-size: 30px;
+  text-align: center;
 }
 
 .doctor-skjul1 {
@@ -493,4 +505,63 @@ input[type="range"]::-webkit-slider-thumb {
 /* Hover-effekt */
 input[type="range"]::-webkit-slider-thumb:hover {
   background: #294d7a;
+}
+
+#form-summary {
+  /* match form-section styling */
+  border: var(--form-border);
+  border-radius: var(--form-border-radius);
+  padding: 2rem 30px;
+  margin-top: 3rem;
+  background-color: var(--color-infobox-1-bg);
+  color: var(--form-text-color);
+
+  /* center and limit width like a form card */
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* headline */
+#form-summary h2 {
+  font-family: var(--font-family-cheeryBomb);
+  font-size: 3.5rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  background-color: var(--headline-bg-color-inverted);
+  color: var(--headline-color-inverted);
+  padding: 0.4rem 0;
+  border-top-left-radius: calc(var(--form-border-radius) - 2px);
+  border-top-right-radius: calc(var(--form-border-radius) - 2px);
+}
+
+/* content layout */
+#form-summary article {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+/* placeholder / summary box */
+#form-summary .placeholder {
+  padding: var(--form-input-padding);
+  line-height: 1.4;
+  color: var(--form-text-color);
+}
+#form-summary p {
+  font-family: var(--font-family-sans-serif);
+  font-size: 1rem;
+}
+
+/* small headings inside summary */
+#form-summary h3 {
+  font-family: var(--font-family-sans-serif);
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  margin-top: 1rem;
 }

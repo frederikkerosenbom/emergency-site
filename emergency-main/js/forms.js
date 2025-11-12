@@ -137,6 +137,7 @@ function checkDoctorBoxes() {
     resetButton.classList.remove("hide");
   }
 }
+
 //reset button
 resetButton.addEventListener("click", resetButton1);
 
@@ -156,3 +157,97 @@ function updateSliderColor() {
 
 slider.addEventListener("input", updateSliderColor);
 updateSliderColor();
+
+//summary
+// js/forms.js
+
+// === FORM SETUP ===
+const form = document.querySelector("#webform");
+const summaryArticle = document.querySelector("#form-summary article");
+
+// variabel til at huske lægetjek-beskeden
+let doctorMessage = "";
+
+// === LÆGETJEK LOGIK ===
+const doctorCheckBtn = document.querySelector("#doctor-check-btn");
+
+doctorCheckBtn.addEventListener("click", () => {
+  const checked = document.querySelectorAll('input[name="doctor-list"]:checked');
+
+  // Skjul alle beskeder
+  document.querySelectorAll(".doctor-skjul1, .doctor-skjul2, .doctor-skjul3, .doctor-skjul4").forEach((msg) => {
+    msg.classList.add("hide");
+  });
+
+  // Bestem besked (du kan ændre logikken her)
+  if (checked.length === 0) {
+    doctorMessage = "Der er ikke valgt noget.";
+    document.querySelector("#doctor-skjul3").classList.remove("hide");
+  } else if (checked.length >= 3) {
+    doctorMessage = "🚨 RING 112 🚨";
+    document.querySelector("#doctor-skjul1").classList.remove("hide");
+  } else if (document.querySelector("#head-doctor").checked || document.querySelector("#blod-head").checked) {
+    doctorMessage = "🧠 RING TIL EGEN LÆGE 🧠";
+    document.querySelector("#doctor-skjul4").classList.remove("hide");
+  } else if (document.querySelector("#home").checked) {
+    doctorMessage = "😎 TAG DIG SAMMEN OG KØR HJEM 😎";
+    document.querySelector("#doctor-skjul3").classList.remove("hide");
+  } else {
+    doctorMessage = "😬 KOM HJEM OG SLAP AF 😬";
+    document.querySelector("#doctor-skjul2").classList.remove("hide");
+  }
+});
+
+// === SUBMIT EVENT ===
+form.addEventListener("submit", handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+
+  // Hent felter
+  const name = formData.get("name");
+  const email = formData.get("e-mail");
+  const fall = formData.get("fall");
+  const helmet = formData.get("helmet");
+  const vehicle = formData.get("vehicle");
+  const pain = formData.get("pain");
+  const date = formData.get("date");
+  const how = formData.get("how");
+  const distraction = formData.get("distraction");
+  const embarrassment = formData.get("embarrassment");
+  const before = formData.get("before");
+  const visibleInjuries = formData.get("visible_injuries");
+
+  const hurtParts = formData.getAll("hurt");
+  const doctorList = formData.getAll("doctor-list");
+  // 5. skriv det ud i summary
+  summaryArticle.innerHTML = `
+    <h3>Opsummering</h3>
+    <p><strong>Navn:</strong> ${name || "-"}</p>
+    <p><strong>Email:</strong> ${email || "-"}</p>
+    <p><strong>Faldt på hjul:</strong> ${fall || "-"}</p>
+    <p><strong>Hjelm:</strong> ${helmet || "-"}</p>
+    <p><strong>Køretøj:</strong> ${vehicle || "-"}</p>
+    <p><strong>Dato:</strong> ${date || "-"}</p>
+    <p><strong>Smerte (1-10):</strong> ${pain || "-"}</p>
+    <p><strong>Hvor slog du dig:</strong> ${hurtParts.length ? hurtParts.join(", ") : "-"}</p>
+    <p><strong>Synlige skader:</strong> ${visibleInjuries || "-"}</p>
+    <p><strong>Distraheret:</strong> ${distraction || "-"}</p>
+    <p><strong>Pinlighed:</strong> ${embarrassment || "-"}</p>
+    <p><strong>Har du prøvet det før:</strong> ${before || "-"}</p>
+    <p><strong>Hvordan skete det:</strong> ${how || "-"}</p>
+    <p><strong>Lægetjek:</strong> ${doctorList.length ? doctorList.join(", ") : "-"}</p>
+    <p><strong>Anbefaling:</strong> ${doctorMessage || "Ingen lægetjek udført"}</p>
+  `;
+  resetAll();
+}
+
+function resetAll() {
+  resetButton1();
+  form.reset();
+  document.querySelector(".form-q-skjul").classList.add("hide");
+
+  alert("Tak for din indberetning! Formularen er nu sendt og ryddet.");
+}
