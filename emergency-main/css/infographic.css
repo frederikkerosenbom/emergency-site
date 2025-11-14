@@ -14,17 +14,18 @@
   line-height: 3rem;
   text-align: center;
   background-color: var(--color-headline-bg);
-  /* color: var(--color-headline-text-page); */
   color: var(--color-page2-text-page);
   font-family: var(--font-family-cheeryBomb);
   margin-bottom: 1rem;
+  font-size: 22px;
 }
 .info-text h3 {
-  font-size: 0.8rem;
+  font-size: 1rem;
   line-height: 0.8rem;
   font-weight: 600;
   margin: 0;
   padding: 0;
+  font-family: var(--font-family-sans-serif);
 }
 .info-text > *:not(:first-child) {
   margin: 0 clamp(1rem, 10%, 7rem);
@@ -34,6 +35,7 @@
   line-height: 1.3;
   margin: 0 0 1.2rem 0;
   padding: 0;
+  font-family: var(--font-family-sans-serif);
 }
 .info-box {
   padding: 1.5rem 1rem 0.5rem 1rem;
@@ -49,7 +51,7 @@
 }
 
 .fadeIn {
-  animation: fadeIn 1.5s;
+  animation: fadeIn 1.5s forwards;
 }
 
 @keyframes fadeIn {
@@ -59,4 +61,30 @@
   to {
     opacity: 1;
   }
+}
+
+.fadeOut {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#instruction .underoverskrift {
+  font-family: var(--font-family-sans-serif);
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--color-headline-bg);
+  place-self: center;
+}
+
+#instruction li {
+  font-family: var(--font-family-sans-serif);
+  margin-bottom: 10px;
 }
