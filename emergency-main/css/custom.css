@@ -1,9 +1,12 @@
 :root {
-  /* Colours */
-  --color-bg: #f9b4d3; /* page background /* /*F9B4D3 el. ffd4e0*/
+  color-scheme: light dark;
+
+  /* Colours 
+  */
+  --color-bg: light-dark(#f9b4d3, #004583); /* page background /*  ffd4e0*/
 
   /* Header */
-  --color-head-bg: #f9b4d3;
+  --color-head-bg: light-dark(#f9b4d3, #004583);
 
   /* Logotype */
   --color-logotype-bg: #0e9ef3;
@@ -13,23 +16,26 @@
   /* Global menu */
   --color-menu-bg: #0e9ef3;
   /* Links */
-  --color-link-bg: #f9b4d3;
-  --color-link-hover: #fff; /* used */
-  --color-link-active: #99958f; /* used */
+  --color-link-bg: light-dark(#f9b4d3, #00467f);
+  --color-link-hover: light-dark(#fff, #00375f); /* used */
+  --color-link-active: #0e9ef3; /* used */
   --border-radius-links: 5px;
+  --color-link-text: light-dark(#00467f, #f9b4d3);
+  --mode-color-bg: light-dark(#f9b3d2, #00467f);
 
   /* Headlines og rubrik */
   --font-h1-size: 10rem;
   --font-sub1-size: 4rem;
   --font-h2-size: 1rem;
   --font-h3-size: 2rem;
-  --color-headline-bg: #00467f;
-  --color-headline-text-page: #00467f;
-  --color-headline-breaking-bg: #fec71d;
+  --color-headline-bg: light-dark(#00467f, #004583);
+  --color-headline-text-page: light-dark(#00467f, #f9b4d3);
+  --color-headline-breaking-bg: light-dark(#fec71d, #f9b4d3);
   --color-page2-text-page: #f9b4d3;
   /* Tekst */
-  --color-text: #000;
-  --color-text-inverted: #ffffff;
+  --color-text: light-dark(#000, #e8f0ff);
+  --color-text-inverted: light-dark(#e8f0ff, #0e9ef3);
+  --newscard-text: light-dark(#000, #004583);
 
   /*  Marginer */
   --margin-head-bottom: 5px;
@@ -39,14 +45,27 @@
   --border-radius: 5px;
 
   /* Cards */
-  --color-card-bg: #0e9ef3;
-  --color-cta-card-bg: #00467f;
+  --color-card-bg: light-dark(#0e9ef3, #00375f);
+  --color-cta-card-bg: light-dark(#00467f, #00375f);
+  --color-card-h2: light-dark(#e8f0ff, #0e9ef3);
+  --color-cta--bg-2: #00467f;
+
   /* news-cards */
-  --color-news-bg: #fec71d;
+  --color-news-bg: light-dark(#fec71d, #f9b3d2);
   --color-news-bg-inverted: #00467f;
-  --color-cta-newscard-bg: #00467f;
+  --color-cta-newscard-bg: light-dark(#00467f, #00375f);
   --color-cta-newscard-bg-inverted: #fec71d;
 
+  /*dialog*/
+  --dialog-bg: light-dark(#fec71d, #004583);
+  --dialog-border: light-dark(#004583, #00375f);
+  --dialog-text: light-dark(#000, #f9b3d2);
+  --dialog-h2-color: light-dark(#004583, #f9b3d2);
+  --obs-border: light-dark(#004583, #00375f);
+  --cta-close-color-text: light-dark(#e8f0ff, #f9b3d2);
+  --dialog-radio-border: light-dark(#00467f, #f9b3d2);
+  --dialog-radio-bg: light-dark(#00467f, #f9b3d2);
+  --breaking-heading: #00467f;
   /* Fonts */
   --font-family-sans: ui-sans-serif;
   /* --font-weight-light: 300;
@@ -67,17 +86,22 @@
   --form-submit-size: 1rem;
 
   /* Infographics */
-  --color-info-bg: #0e9ef3;
+  --color-info-bg: light-dark(#0e9ef3, #00375f);
   --color-infobox-1-bg: #fec71d;
   --color-infobox-2-bg: #f9b4d3;
 
   /*forms*/
-  --form-border: 15px solid #004583;
+  --form-border: light-dark(#004583, #f9b4d3);
   --form-border-radius: 70px;
   --form-font-family: ui-sans-serif;
-  --form-text-color: #004583;
-  --form-input-border: 2.5px solid #004583;
+  --form-text-color: light-dark(#004583, #f9b4d3);
+  --form-input-border: light-dark(#004583, #f9b4d3);
   --form-input-border-radius: 10px;
   --form-input-padding: 5px;
   --form-input-width: 100%;
+
+  /*forms*/
+
+  --darkmode-cta: #fec71d;
+  /* --svg-text-color:; */
 }

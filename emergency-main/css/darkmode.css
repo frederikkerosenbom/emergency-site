@@ -1,0 +1,33 @@
+/* --darkmode-h1-color: #f9b3d2;
+  --darkmode-bg: #004583; */
+/* --darkmode-bg:#00467F; 2*/
+/* --darkmode-undertitel-labels: #e8f0ff;
+  --darkmode-cta: #fec71d;
+  --darkmode-form-color: #f9b3d2;
+  --darkmode-boks: #00375f; */
+
+#main-disclamer-content .riders {
+  filter: invert(82%) sepia(21%) saturate(748%) hue-rotate(292deg) brightness(103%) contrast(97%);
+}
+#main-disclamer-content .head-img-2 {
+  filter: invert(82%) sepia(21%) saturate(748%) hue-rotate(292deg) brightness(103%) contrast(97%);
+}
+
+.news_card:first-child:before {
+  background-color: var(--darkmode-h1-color);
+  color: var(--color-headline-text-page);
+}
+
+.dialog-boks h2,
+.dialog-boks h5 {
+  color: var(--darkmode-h1-color);
+}
+
+input[type="radio"] {
+  border: 3px solid var(--darkmode-h1-color);
+  background-color: var(--darkmode-h1-color);
+}
+
+:focus-visible {
+  outline: var(--darkmode-h1-color) 1px;
+}

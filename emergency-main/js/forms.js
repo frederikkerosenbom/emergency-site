@@ -152,7 +152,11 @@ const slider = document.getElementById("pinlig");
 
 function updateSliderColor() {
   const value = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
-  slider.style.background = `linear-gradient(to right, #00467f ${value}%, transparent ${value}%)`;
+  if (html.classList.contains("dark")) {
+    slider.style.background = `linear-gradient(to right, #f9b4d3 ${value}%, transparent ${value}%)`;
+  } else {
+    slider.style.background = `linear-gradient(to right, #00467f ${value}%, transparent ${value}%)`;
+  }
 }
 
 slider.addEventListener("input", updateSliderColor);

@@ -2,6 +2,11 @@ html {
   font-family: var(--font-family-sans);
   color: var(--color-text);
   background-color: var(--color-bg);
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 header {
@@ -31,13 +36,11 @@ header {
   letter-spacing: 0.2em;
 }
 #main-disclamer-content .riders {
-  filter: invert(15%) sepia(75%) saturate(1500%) hue-rotate(185deg) brightness(90%) contrast(105%);
   place-self: center;
   padding-left: 0px;
   width: 1000px;
 }
 #main-disclamer-content .head-img-2 {
-  filter: invert(15%) sepia(75%) saturate(1500%) hue-rotate(185deg) brightness(95%) contrast(100%);
   place-self: center;
   padding-left: 0px;
   width: 1000px;
@@ -136,7 +139,7 @@ nav a {
 header nav li a {
   margin: 1.5rem;
   background-color: var(--color-link-bg);
-  color: #00467f;
+  color: var(--color-link-text);
   font-size: var(--followup-text-size);
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius-links);
@@ -226,4 +229,58 @@ footer a {
 .news_card1 h3::before,
 .news_card1 h5::before {
   text-align: center;
+}
+
+.darkmode {
+  background-color: var(--darkmode-bg);
+  color: var(--darkmode-h1-color);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--mode-color-bg);
+  border-radius: 34px;
+}
+input:checked + .slider::before {
+  translate: 100% 0;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 3px;
+  background-color: #0e9ef3;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.slider::after {
+  content: "";
+  background-color: var(--darkmode-bg);
+}
+.dark-img-filter {
+  filter: invert(82%) sepia(21%) saturate(748%) hue-rotate(292deg) brightness(103%) contrast(97%);
+}
+
+.light-img-filter {
+  filter: invert(15%) sepia(75%) saturate(1500%) hue-rotate(185deg) brightness(90%) contrast(105%);
 }

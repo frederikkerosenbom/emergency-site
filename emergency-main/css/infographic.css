@@ -80,7 +80,7 @@
   font-family: var(--font-family-sans-serif);
   font-size: 2rem;
   font-weight: bold;
-  color: var(--color-headline-bg);
+  color: var(--color-headline-text-page);
   place-self: center;
 }
 

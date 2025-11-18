@@ -4,7 +4,8 @@
 
 /*form*/
 #form-section {
-  border: var(--form-border);
+  border: 15px solid;
+  border-color: var(--form-border);
   border-radius: var(--form-border-radius);
   padding-inline: 30px;
   margin-top: 3rem;
@@ -117,7 +118,7 @@ form {
   grid-column: 1/2;
   grid-row: 2/3;
   height: fit-content;
-  margin-top: 12rem;
+  margin-top: 14rem;
 }
 
 .date-group {
@@ -148,7 +149,8 @@ form {
   grid-row: 4/5;
 }
 .webform-detaljer input {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   padding: var(--form-input-padding);
   width: var(--form-input-width);
@@ -159,7 +161,8 @@ form {
 }
 
 .webform-kontakt label {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   padding: var(--form-input-padding);
   width: var(--form-input-width);
@@ -185,7 +188,8 @@ form {
 }
 
 .form-group select {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   padding: var(--form-input-padding);
   width: var(--form-input-width);
@@ -197,7 +201,8 @@ form {
 }
 
 .koretoj-skjul input {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   padding: var(--form-input-padding);
   width: var(--form-input-width);
@@ -235,7 +240,8 @@ textarea:focus {
 }
 
 fieldset {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   margin-top: 15px;
   margin-bottom: 1rem;
@@ -254,7 +260,8 @@ legend {
 }
 
 .date {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   padding: var(--form-input-padding);
   width: var(--form-input-width);
@@ -262,7 +269,8 @@ legend {
 }
 
 .how-group textarea {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   padding: var(--form-input-padding);
   /* width: var(--form-input-width); */
@@ -341,7 +349,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-weight: normal;
 }
 form button[type="submit"] {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: 50px;
   background-color: #004583;
   padding: var(--form-input-padding);
@@ -358,7 +367,8 @@ form button[type="submit"] {
 
 form button[type="reset"] {
   font-size: 15px;
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: 50px;
   font-family: var(--font-family-sans-serif);
   color: var(--form-text-color);
@@ -373,7 +383,8 @@ form button[type="reset"] {
   justify-self: center;
   grid-column: 1/3;
   grid-row: 6/7;
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: 50px;
   font-family: var(--font-family-sans-serif);
   color: var(--form-text-color);
@@ -396,7 +407,8 @@ input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
   background-color: transparent;
-  border: 2px solid #00467f; /* samme mørkeblå som teksten */
+  border: 2px solid;
+  border-color: var(--dialog-radio-border); /* samme mørkeblå som teksten */
   border-radius: 50%; /* gør den rund */
   width: 20px;
   height: 20px;
@@ -413,7 +425,7 @@ input[type="radio"]:checked::after {
   left: 4px;
   width: 8px;
   height: 8px;
-  background-color: #00467f; /* fyldet i midten */
+  background-color: var(--dialog-radio-bg); /* fyldet i midten */
   border-radius: 50%;
 }
 /*style checkbox*/
@@ -421,7 +433,8 @@ input[type="checkbox"] {
   appearance: none; /* Fjern standard-styling */
   -webkit-appearance: none; /* For Safari */
   background-color: transparent;
-  border: 2px solid #00467f;
+  border: 2px solid;
+  border-color: var(--dialog-radio-border);
   border-radius: 4px;
   width: 20px;
   height: 20px;
@@ -432,7 +445,7 @@ input[type="checkbox"] {
 /* Når checkboxen er markeret */
 input[type="checkbox"]:checked {
   background-color: transparent; /* Stadig ingen baggrund */
-  border-color: #00467f; /* Samme farve */
+  border-color: var(--dialog-radio-bg); /* Samme farve */
   position: relative;
 }
 
@@ -444,7 +457,8 @@ input[type="checkbox"]:checked::after {
   left: 6px;
   width: 5px;
   height: 10px;
-  border: solid #00467f;
+  border: 2px solid;
+  border-color: var(--dialog-radio-border);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
@@ -455,11 +469,12 @@ input[type="checkbox"]:checked::after {
 
 /**style range**/
 input[type="range"] {
-  -webkit-appearance: none; /* Fjern standard-styling */
+  -webkit-appearance: none;
   width: 100%;
   height: 8px;
   background: linear-gradient(to right, #00467f, transparent);
-  border: 2px solid #00467f; /* Samme blå som checkbox/radio */
+  border: 2px solid;
+  border-color: var(--dialog-radio-border); /* Samme blå som checkbox/radio */
   border-radius: 10px;
   outline: none;
   cursor: pointer;
@@ -468,8 +483,9 @@ input[type="range"] {
 /* “Kuglen” (thumb) */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  background: #00467f; /* Mørkeblå */
-  border: 2px solid #00467f;
+  background: var(--dialog-radio-bg); /* Mørkeblå */
+  border: 2px solid;
+  border-color: var(--dialog-radio-border);
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -480,12 +496,13 @@ input[type="range"]::-webkit-slider-thumb {
 
 /* Hover-effekt */
 input[type="range"]::-webkit-slider-thumb:hover {
-  background: #294d7a;
+  background: var(--dialog-radio-bg);
 }
 
 #form-summary {
   /* match form-section styling */
-  border: var(--form-border);
+  border: 15px solid;
+  border-color: var(--form-border);
   border-radius: var(--form-border-radius);
   padding: 2rem 30px;
   margin-top: 3rem;

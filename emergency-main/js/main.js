@@ -37,9 +37,22 @@ function phoneHighlight() {
   console.log("phoneHighlight");
   this.style.fill = "rgba(255, 0, 200, 1)";
 }
+// function phoneUnHighlight() {
+//   console.log("phoneUnHighlight");
+//   this.style.fill = "#000";
+// }
+
 function phoneUnHighlight() {
   console.log("phoneUnHighlight");
-  this.style.fill = "#000";
+
+  // tjek om dark mode er aktiv
+  const isDark = document.documentElement.classList.contains("dark");
+
+  if (isDark) {
+    this.style.fill = "#f9b4d3"; // farven i dark mode
+  } else {
+    this.style.fill = "#000"; // farven i light mode
+  }
 }
 // farveskift sko
 sko.addEventListener("mouseover", shoeHighlight);
