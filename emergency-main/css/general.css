@@ -2,6 +2,11 @@ html {
   font-family: var(--font-family-sans);
   color: var(--color-text);
   background-color: var(--color-bg);
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 header {
@@ -9,20 +14,36 @@ header {
 }
 
 #main-disclamer {
-  height: 225px;
+  height: 425px;
   background-color: var(--color-head-bg);
-  display: flex;
-  justify-content: flex-start;
+  /* display: flex; */
+  /* justify-content: flex-start; */
   align-items: center;
-  padding-left: 2rem;
+  /* padding-left: 2rem; */
   padding-bottom: 2%;
   margin-bottom: var(--margin-head-bottom);
-  margin-top: var(--margin-head-top);
+  /* margin-top: var(--margin-head-top); */
 }
 
 #main-disclamer-content {
-  display: flex;
+  /* display: flex; */
   column-gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+#main-disclamer-content h1 {
+  place-self: center;
+  letter-spacing: 0.2em;
+}
+#main-disclamer-content .riders {
+  place-self: center;
+  padding-left: 0px;
+  width: 1000px;
+}
+#main-disclamer-content .head-img-2 {
+  place-self: center;
+  padding-left: 0px;
+  width: 1000px;
 }
 
 main section {
@@ -118,10 +139,13 @@ nav a {
 header nav li a {
   margin: 1.5rem;
   background-color: var(--color-link-bg);
-  color: var(--color-text);
+  color: var(--color-link-text);
   font-size: var(--followup-text-size);
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius-links);
+  font-family: var(--font-family-cheeryBomb);
+
+  letter-spacing: 0.08em;
 }
 
 /* Pilen efter menu-tekst */
@@ -145,4 +169,118 @@ footer a {
 
 :focus-visible {
   outline: #00467f 1px;
+}
+
+/***animation****/
+
+.hero-title {
+  position: relative;
+  z-index: 1; /* tekst-lag */
+  text-align: center;
+  font-size: 6rem; /* eller hvad du har */
+  margin: 0;
+  padding-top: 15rem;
+}
+
+/* Billedet med figurerne */
+.riders {
+  position: absolute;
+  /* left: 50%; */
+  top: 15%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  max-width: 900px;
+  transform-origin: right center; /* pivot i højre side → venstre løfter sig */
+  z-index: 2; /* HØJERE end teksten */
+}
+/* Når denne klasse kommer på, starter animationen */
+.riders.animate {
+  animation: brakeIn 1.6s ease-out forwards;
+}
+
+.riders.exit {
+  animation: driveOut 0.8s ease-in forwards;
+}
+
+@keyframes brakeIn {
+  0% {
+    transform: translateX(-200%) rotate(0deg);
+  }
+  60% {
+    transform: translateX(0) rotate(0deg);
+  }
+  80% {
+    transform: translateX(0) rotate(35deg); /* venstre side op */
+  }
+  100% {
+    transform: translateX(0) rotate(0deg); /* falder ned igen */
+  }
+}
+
+@keyframes driveOut {
+  0% {
+    transform: translateX(0%) translateY(0%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(150%) translateY(-50%) rotate(10deg);
+  }
+}
+
+.news_card1 h3::before,
+.news_card1 h5::before {
+  text-align: center;
+}
+
+.darkmode {
+  background-color: var(--darkmode-bg);
+  color: var(--darkmode-h1-color);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--mode-color-bg);
+  border-radius: 34px;
+}
+input:checked + .slider::before {
+  translate: 100% 0;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 4px;
+  bottom: 3px;
+  background-color: #0e9ef3;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.slider::after {
+  content: "";
+  background-color: var(--darkmode-bg);
+}
+.dark-img-filter {
+  filter: invert(82%) sepia(21%) saturate(748%) hue-rotate(292deg) brightness(103%) contrast(97%);
+}
+
+.light-img-filter {
+  filter: invert(15%) sepia(75%) saturate(1500%) hue-rotate(185deg) brightness(90%) contrast(105%);
 }

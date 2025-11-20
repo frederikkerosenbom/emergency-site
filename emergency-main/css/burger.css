@@ -4,6 +4,15 @@
   cursor: pointer;
 }
 
+/*logo*/
+.logo img {
+  width: 70px;
+  height: 60px;
+}
+.logo {
+  margin-block: 10px;
+}
+
 .burger .line {
   display: block;
   width: 100%;

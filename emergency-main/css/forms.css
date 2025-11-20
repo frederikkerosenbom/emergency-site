@@ -2,38 +2,10 @@
   background-color: var(--form-background-color);
 }
 
-#form-section,
-#form-summary {
-  background-color: var(--info-background-color);
-  padding: 0;
-}
-#form-summary h2 {
-  line-height: 3rem;
-  text-align: center;
-  background-color: var(--headline-bg-color-inverted);
-  color: var(--headline-color-inverted);
-  padding-top: 5px;
-}
-#form-summary h3 {
-  font-size: 0.8rem;
-  line-height: 0.8rem;
-  font-weight: 600;
-  margin: 0;
-  padding: 0;
-}
-#form-summary > *:not(:first-child) {
-  margin: 0 clamp(1rem, 10%, 7rem);
-}
-#form-summary p {
-  font-size: 0.8rem;
-  line-height: 1.3;
-  margin: 0 0 1.2rem 0;
-  padding: 0;
-}
-
 /*form*/
 #form-section {
-  border: var(--form-border);
+  border: 15px solid;
+  border-color: var(--form-border);
   border-radius: var(--form-border-radius);
   padding-inline: 30px;
   margin-top: 3rem;
@@ -97,6 +69,11 @@ form {
   margin-right: 5px;
 }
 
+#form-show label {
+  display: flex;
+  justify-content: center;
+}
+
 .webform-kontakt {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -125,6 +102,7 @@ form {
 .how-group {
   grid-column: 1/2;
   grid-row: 2/3;
+  height: fit-content;
 }
 
 .pinlig-group {
@@ -139,7 +117,8 @@ form {
 .distract-group {
   grid-column: 1/2;
   grid-row: 2/3;
-  place-content: end;
+  height: fit-content;
+  margin-top: 14rem;
 }
 
 .date-group {
@@ -170,7 +149,8 @@ form {
   grid-row: 4/5;
 }
 .webform-detaljer input {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   padding: var(--form-input-padding);
   width: var(--form-input-width);
@@ -181,7 +161,8 @@ form {
 }
 
 .webform-kontakt label {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   padding: var(--form-input-padding);
   width: var(--form-input-width);
@@ -207,7 +188,8 @@ form {
 }
 
 .form-group select {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   padding: var(--form-input-padding);
   width: var(--form-input-width);
@@ -219,7 +201,8 @@ form {
 }
 
 .koretoj-skjul input {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   padding: var(--form-input-padding);
   width: var(--form-input-width);
@@ -242,13 +225,23 @@ form {
 textarea {
   border: 0;
   width: 100%;
+  padding: 5px;
+  font-family: var(--font-family-sans-serif);
+  color: var(--form-text-color);
 }
+
 .hurt-extra textarea {
   min-height: 3lh;
 }
 
+textarea:focus {
+  font-family: var(--font-family-sans-serif);
+  color: var(--form-text-color);
+}
+
 fieldset {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   margin-top: 15px;
   margin-bottom: 1rem;
@@ -267,18 +260,20 @@ legend {
 }
 
 .date {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   padding: var(--form-input-padding);
   width: var(--form-input-width);
   margin-block: 10px;
 }
 
-#message {
-  border: var(--form-input-border);
+.how-group textarea {
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: var(--form-input-border-radius);
   padding: var(--form-input-padding);
-  width: var(--form-input-width);
+  /* width: var(--form-input-width); */
   margin-block: 10px;
   font-weight: normal;
 }
@@ -324,6 +319,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-weight: bold;
   place-self: center;
   font-size: 30px;
+  text-align: center;
 }
 
 .doctor-skjul1 {
@@ -353,7 +349,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-weight: normal;
 }
 form button[type="submit"] {
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: 50px;
   background-color: #004583;
   padding: var(--form-input-padding);
@@ -370,7 +367,8 @@ form button[type="submit"] {
 
 form button[type="reset"] {
   font-size: 15px;
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: 50px;
   font-family: var(--font-family-sans-serif);
   color: var(--form-text-color);
@@ -385,7 +383,8 @@ form button[type="reset"] {
   justify-self: center;
   grid-column: 1/3;
   grid-row: 6/7;
-  border: var(--form-input-border);
+  border: 2.5px solid;
+  border-color: var(--form-input-border);
   border-radius: 50px;
   font-family: var(--font-family-sans-serif);
   color: var(--form-text-color);
@@ -408,7 +407,8 @@ input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
   background-color: transparent;
-  border: 2px solid #00467f; /* samme mørkeblå som teksten */
+  border: 2px solid;
+  border-color: var(--dialog-radio-border); /* samme mørkeblå som teksten */
   border-radius: 50%; /* gør den rund */
   width: 20px;
   height: 20px;
@@ -425,7 +425,7 @@ input[type="radio"]:checked::after {
   left: 4px;
   width: 8px;
   height: 8px;
-  background-color: #00467f; /* fyldet i midten */
+  background-color: var(--dialog-radio-bg); /* fyldet i midten */
   border-radius: 50%;
 }
 /*style checkbox*/
@@ -433,7 +433,8 @@ input[type="checkbox"] {
   appearance: none; /* Fjern standard-styling */
   -webkit-appearance: none; /* For Safari */
   background-color: transparent;
-  border: 2px solid #00467f;
+  border: 2px solid;
+  border-color: var(--dialog-radio-border);
   border-radius: 4px;
   width: 20px;
   height: 20px;
@@ -444,7 +445,7 @@ input[type="checkbox"] {
 /* Når checkboxen er markeret */
 input[type="checkbox"]:checked {
   background-color: transparent; /* Stadig ingen baggrund */
-  border-color: #00467f; /* Samme farve */
+  border-color: var(--dialog-radio-bg); /* Samme farve */
   position: relative;
 }
 
@@ -456,7 +457,8 @@ input[type="checkbox"]:checked::after {
   left: 6px;
   width: 5px;
   height: 10px;
-  border: solid #00467f;
+  border: 2px solid;
+  border-color: var(--dialog-radio-border);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
@@ -467,11 +469,12 @@ input[type="checkbox"]:checked::after {
 
 /**style range**/
 input[type="range"] {
-  -webkit-appearance: none; /* Fjern standard-styling */
+  -webkit-appearance: none;
   width: 100%;
   height: 8px;
   background: linear-gradient(to right, #00467f, transparent);
-  border: 2px solid #00467f; /* Samme blå som checkbox/radio */
+  border: 2px solid;
+  border-color: var(--dialog-radio-border); /* Samme blå som checkbox/radio */
   border-radius: 10px;
   outline: none;
   cursor: pointer;
@@ -480,8 +483,9 @@ input[type="range"] {
 /* “Kuglen” (thumb) */
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  background: #00467f; /* Mørkeblå */
-  border: 2px solid #00467f;
+  background: var(--dialog-radio-bg); /* Mørkeblå */
+  border: 2px solid;
+  border-color: var(--dialog-radio-border);
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -492,5 +496,66 @@ input[type="range"]::-webkit-slider-thumb {
 
 /* Hover-effekt */
 input[type="range"]::-webkit-slider-thumb:hover {
-  background: #294d7a;
+  background: var(--dialog-radio-bg);
+}
+
+#form-summary {
+  /* match form-section styling */
+  border: 15px solid;
+  border-color: var(--form-border);
+  border-radius: var(--form-border-radius);
+  padding: 2rem 30px;
+  margin-top: 3rem;
+  background-color: transparent;
+
+  color: var(--form-text-color);
+
+  /* center and limit width like a form card */
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* headline */
+#form-summary h2 {
+  font-family: var(--font-family-cheeryBomb);
+  font-size: 3.5rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  background-color: var(--headline-bg-color-inverted);
+  color: var(--headline-color-inverted);
+  padding: 0.4rem 0;
+  border-top-left-radius: calc(var(--form-border-radius) - 2px);
+  border-top-right-radius: calc(var(--form-border-radius) - 2px);
+}
+
+/* content layout */
+#form-summary article {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+/* placeholder / summary box */
+#form-summary .placeholder {
+  padding: var(--form-input-padding);
+  line-height: 1.4;
+  color: var(--form-text-color);
+}
+#form-summary p {
+  font-family: var(--font-family-sans-serif);
+  font-size: 1rem;
+}
+
+/* small headings inside summary */
+#form-summary h3 {
+  font-family: var(--font-family-sans-serif);
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  margin-top: 1rem;
 }
