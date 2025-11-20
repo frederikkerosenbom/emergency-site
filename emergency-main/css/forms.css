@@ -30,3 +30,467 @@
   margin: 0 0 1.2rem 0;
   padding: 0;
 }
+
+/*form*/
+#form-section {
+  border: var(--form-border);
+  border-radius: var(--form-border-radius);
+  padding-inline: 30px;
+  margin-top: 3rem;
+}
+
+#form-section h2 {
+  font-family: var(--font-family-cheeryBomb);
+  color: var(--form-text-color);
+  font-size: 7rem;
+  place-self: center;
+}
+
+#form-section h3 {
+  font-family: var(--font-family-cheeryBomb);
+  color: var(--form-text-color);
+  font-size: 45px;
+  place-self: center;
+  letter-spacing: 0.05em;
+}
+
+#form-section h4 {
+  font-family: sans-serif;
+  color: var(--form-text-color);
+  font-weight: bold;
+  font-size: 20px;
+}
+#form-section label {
+  font-family: sans-serif;
+  color: var(--form-text-color);
+  font-weight: bold;
+}
+#form-section input {
+  font-family: sans-serif;
+  color: var(--form-text-color);
+  font-weight: normal;
+  padding: 3px;
+}
+
+form ::placeholder {
+  color: #0046839f;
+  padding: 10px;
+}
+
+form {
+  accent-color: #004583;
+}
+
+/*form layout*/
+
+.form-group-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-block: 2rem;
+  align-items: center;
+}
+.form-group-1 label {
+  place-self: center;
+}
+
+.form-group-1 input {
+  margin-right: 5px;
+}
+
+.webform-kontakt {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.form-group {
+  margin-top: 20px;
+}
+.webform-detaljer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-group-hjelm {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-top: 20px;
+}
+
+.fall-group {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.how-group {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.pinlig-group {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.pain-group {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.distract-group {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  place-content: end;
+}
+
+.date-group {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  place-content: end;
+  margin-top: 9rem;
+}
+
+.before-group {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  place-content: center;
+  margin-top: 7.5rem;
+}
+
+.before-flex {
+  display: flex;
+  gap: 6rem;
+  margin-block: 10px;
+}
+.before-flex input {
+  margin-right: 5px;
+}
+
+.doctor-group {
+  grid-column: 1/3;
+  grid-row: 4/5;
+}
+.webform-detaljer input {
+  border: var(--form-input-border);
+  border-radius: var(--form-input-border-radius);
+  padding: var(--form-input-padding);
+  width: var(--form-input-width);
+}
+
+.webform-kontakt {
+  margin-bottom: 3rem;
+}
+
+.webform-kontakt label {
+  border: var(--form-input-border);
+  border-radius: var(--form-input-border-radius);
+  padding: var(--form-input-padding);
+  width: var(--form-input-width);
+}
+
+.webform-kontakt input {
+  border: 0;
+}
+
+.hurt {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-group-hjelm .form-group-1 {
+  margin-block: 10px;
+  margin-inline: 5px;
+}
+
+.webform-detaljer .form-group-hjelm .form-group-1 label {
+  display: flex;
+  margin-right: 5rem;
+}
+
+.form-group select {
+  border: var(--form-input-border);
+  border-radius: var(--form-input-border-radius);
+  padding: var(--form-input-padding);
+  width: var(--form-input-width);
+
+  font-family: var(--font-family-sans-serif);
+  color: var(--form-text-color);
+  font-weight: normal;
+  margin-block: 5px;
+}
+
+.koretoj-skjul input {
+  border: var(--form-input-border);
+  border-radius: var(--form-input-border-radius);
+  padding: var(--form-input-padding);
+  width: var(--form-input-width);
+  margin-block: 5px;
+}
+
+.hurt input {
+  width: 15%;
+  margin-right: 5px;
+}
+
+.hurt-skjul input {
+  margin-block: 10px;
+}
+
+.hurt label {
+  display: flex;
+  align-items: center;
+}
+textarea {
+  border: 0;
+  width: 100%;
+}
+.hurt-extra textarea {
+  min-height: 3lh;
+}
+
+fieldset {
+  border: var(--form-input-border);
+  border-radius: var(--form-input-border-radius);
+  margin-top: 15px;
+  margin-bottom: 1rem;
+  height: 100px;
+}
+legend {
+  font-family: sans-serif;
+  font-weight: bold;
+
+  color: var(--form-text-color);
+}
+
+#date {
+  border: 0;
+  width: 80%;
+}
+
+.date {
+  border: var(--form-input-border);
+  border-radius: var(--form-input-border-radius);
+  padding: var(--form-input-padding);
+  width: var(--form-input-width);
+  margin-block: 10px;
+}
+
+#message {
+  border: var(--form-input-border);
+  border-radius: var(--form-input-border-radius);
+  padding: var(--form-input-padding);
+  width: var(--form-input-width);
+  margin-block: 10px;
+  font-weight: normal;
+}
+
+.webform-detaljer .form-group-1 {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2rem;
+  margin-block: 10px;
+}
+.webform-detaljer .form-group-1 label {
+  display: flex;
+}
+
+#pinlig {
+  margin-block: 10px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(15%) sepia(75%) saturate(1500%) hue-rotate(185deg) brightness(90%) contrast(105%);
+}
+
+.doctor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
+}
+
+.doctor input {
+  width: 15%;
+  margin-right: 5px;
+}
+.doctor label {
+  display: flex;
+  align-items: center;
+}
+.doctor-skjul1,
+.doctor-skjul2,
+.doctor-skjul3,
+.doctor-skjul4 {
+  margin-block: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  place-self: center;
+  font-size: 30px;
+}
+
+.doctor-skjul1 {
+  color: rgb(145, 2, 2);
+}
+.doctor-skjul2 {
+  color: #04420d;
+}
+.doctor-skjul3 {
+  color: #004583;
+}
+.doctor-skjul4 {
+  color: #e1a902;
+}
+
+.check-doctor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.check-doctor input {
+  width: auto;
+}
+
+.check-doctor-p {
+  font-weight: normal;
+}
+form button[type="submit"] {
+  border: var(--form-input-border);
+  border-radius: 50px;
+  background-color: #004583;
+  padding: var(--form-input-padding);
+  margin-top: 2rem;
+  margin-bottom: 10px;
+  width: 300px;
+  display: block;
+  justify-self: center;
+  font-family: var(--font-family-cheeryBomb);
+  color: #f9b4d3;
+  font-size: 40px;
+  letter-spacing: 0.05em;
+}
+
+form button[type="reset"] {
+  font-size: 15px;
+  border: var(--form-input-border);
+  border-radius: 50px;
+  font-family: var(--font-family-sans-serif);
+  color: var(--form-text-color);
+  padding-inline: 20px;
+  margin-bottom: 2rem;
+  display: block;
+  justify-self: center;
+}
+
+#doctor-check-btn {
+  display: block;
+  justify-self: center;
+  grid-column: 1/3;
+  grid-row: 6/7;
+  border: var(--form-input-border);
+  border-radius: 50px;
+  font-family: var(--font-family-sans-serif);
+  color: var(--form-text-color);
+  padding-inline: 20px;
+  margin-block: 1rem;
+}
+
+#doctor-reset-btn {
+  text-decoration: underline;
+  border: none;
+  display: block;
+  place-self: end;
+  grid-column: 2/3;
+  grid-row: 6/7;
+  margin-block: 1rem;
+}
+/*style radio*/
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #00467f; /* samme mørkeblå som teksten */
+  border-radius: 50%; /* gør den rund */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* Når den er valgt */
+input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #00467f; /* fyldet i midten */
+  border-radius: 50%;
+}
+/*style checkbox*/
+input[type="checkbox"] {
+  appearance: none; /* Fjern standard-styling */
+  -webkit-appearance: none; /* For Safari */
+  background-color: transparent;
+  border: 2px solid #00467f;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Når checkboxen er markeret */
+input[type="checkbox"]:checked {
+  background-color: transparent; /* Stadig ingen baggrund */
+  border-color: #00467f; /* Samme farve */
+  position: relative;
+}
+
+/* Lav et “checkmark” med et pseudo-element */
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid #00467f;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+/*summary*/
+#form-summary {
+  margin-top: 3rem;
+}
+
+/**style range**/
+input[type="range"] {
+  -webkit-appearance: none; /* Fjern standard-styling */
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, #00467f, transparent);
+  border: 2px solid #00467f; /* Samme blå som checkbox/radio */
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* “Kuglen” (thumb) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #00467f; /* Mørkeblå */
+  border: 2px solid #00467f;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -5px; /* Justér for at centrere */
+  transition: all 0.2s ease;
+}
+
+/* Hover-effekt */
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #294d7a;
+}
